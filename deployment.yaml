@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: bsc-pf-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: bsc-pf
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: bsc-pf
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: bsc-pf
+        image: yash5090/bsc-pf:latest
         ports:
         - containerPort: 5000
